@@ -1,42 +1,11 @@
 # woia-re-property-matching
 
-Portable Agent Plugin for Evaluate explicit property criteria with immutable source evidence; matches never grant availability, authority or acceptance..
+Evaluation-only Real Estate provider v0.5.0 for Sales, Leasing and Customer Service.
 
-## Capability
+Actions: property-match.evaluate, property-match.explain, property-match.refresh. Explicit accepted criteria are compared against versioned, scoped facts. Stale, disputed, unaccepted or missing facts remain UNKNOWN. No criteria, score weighting, business rules or organization authority are invented.
 
-~~~text
-DISCOVER -> DECIDE -> IMPLEMENT -> VALIDATE -> REPORT
-~~~
+Use [the skill](skills/woia-re-property-matching/SKILL.md) and [contract](skills/woia-re-property-matching/references/contract.md). The pure helper needs Node.js with standard crypto support and has no package/network dependency. It returns immutable digest-linked snapshots; organization-qualified storage/access/source authority remain caller responsibilities. A matching property is not proven available, authorized or accepted. External contact remains Customer Service through Communications.
 
-The plugin adapts to the repository it operates on without requiring the consumer to adopt WOIA's authoring toolchain.
+Canonical Real Estate semantics stay in woia-re-domain-contracts; this provider adds no authority service, database or orchestration layer. No runtime adapter is qualified by these synthetic tests.
 
-## Portable package
-
-~~~text
-plugin.json
-README.md
-CHANGELOG.md
-LICENSE
-skills/**
-# optional source diagnostic when retained by the repository
-CHECKSUMS.sha256
-~~~
-
-`CHECKSUMS.sha256` is optional source evidence, not a required portable/release artifact.
-
-Add `mcp.json` only if the capability genuinely requires MCP.
-
-## Consumer requirements
-
-Document only genuine capability/runtime requirements here. Do not list maintenance Node/pnpm/Mise/Docker unless the portable capability itself truly needs them.
-
-## Development
-
-~~~text
-mise install
-mise run bootstrap
-mise run doctor
-mise run ci:fast
-mise run ci:extended
-mise run release:check
-~~~
+Maintenance: mise run bootstrap, mise run doctor, mise run ci:fast; after committing an exact clean candidate, run Ecosystem v0.5.4 plugin:certify-thin with --repo pointing here. Maintenance validation is documented in VALIDATION.md. There are no tags/releases/admission in the implementation gate.

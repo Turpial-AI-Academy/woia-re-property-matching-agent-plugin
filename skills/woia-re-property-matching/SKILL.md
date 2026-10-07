@@ -1,55 +1,17 @@
 ---
 name: woia-re-property-matching
-description: Evaluate explicit property criteria with immutable source evidence; matches never grant availability, authority or acceptance.
+description: Evaluate, explain and refresh property matches using explicit accepted criteria and immutable source evidence for Sales, Leasing and Customer Service. A match never grants availability, authority or acceptance.
 license: MIT
 ---
 
-# woia-re-property-matching
+# Property matching
 
-## Operating flow
+1. Resolve authorized Sales, Leasing or Customer Service scope, purpose and binding. Read [the contract](references/contract.md) before evaluating protected facts or refreshing evidence.
+2. Obtain accepted, versioned criteria and scoped Property facts from competent sources. Never invent weights, thresholds, defaults or organization criteria. Domain Contracts owns canonical identities and Source Authority schemas.
+3. Invoke `execute('property-match.evaluate', input)` from [the helper](scripts/matching.mjs). Explicit equality/numeric bounds compare deterministically; missing, unaccepted, disputed, stale or type-incompatible facts remain UNKNOWN.
+4. Explain with `property-match.explain` using original authorized scope and integrity-checked evidence. Refresh with `property-match.refresh` using the same evaluation identity, next version and prior digest. Preserve all earlier snapshots.
+5. Report criteria-level reasons, source versions and UNKNOWNs. MATCH never grants availability, authority, acceptance or an external Effect. Customer Service alone communicates externally via Communications. Never book, negotiate, publish, accept, charge or contact.
 
-~~~text
-DISCOVER -> DECIDE -> IMPLEMENT -> VALIDATE -> REPORT
-~~~
+This pure offline helper consumes caller assertions. Resolve their authority through qualified organization Source Authority/access controls; this package cannot grant authority or prove runtime enforcement.
 
-## Purpose
-
-Evaluation-only property matching for Sales, Leasing and Customer Service.
-
-## Minimum sufficient evidence
-
-Use a bounded path when an authoritative existing artifact/evidence set is healthy and the requested change is local and understood:
-
-1. identify the artifact/evidence, source candidate, and affected surface;
-2. load only supporting context and references needed for that surface;
-3. amend or re-evaluate the smallest coherent unit;
-4. verify affected behavior plus mandatory cross-cutting invariants;
-5. preserve unrelated valid artifacts/evidence and report what changed.
-
-Use the deep path for a new artifact, unclear scope or contradictory evidence, public API/event/schema changes, persisted data/migrations, authentication/authorization/secrets/signing/trust boundaries, deployment/rollback/availability risk, cross-provider dependency restructuring, unhealthy or unfamiliar conventions, missing durable required evidence, or a failed invariant that invalidates reused evidence. Load the references/checklists needed by those triggers and retain all required safety validation.
-
-## Discover
-
-Inspect actual repository/system state before changing it. Locate authoritative artifacts/evidence and identify affected standards, constraints, supported platforms, integrations, and user requirements. Expand context when a dependency, uncertainty, or deep-path trigger requires it.
-
-## Decide
-
-Select the smallest strategy that satisfies the capability. Preserve healthy existing standards. Do not infer policy from the author's workspace.
-
-## Implement
-
-Apply only authorized changes. Keep domain semantics independent from unrelated tooling.
-
-## Validate
-
-Run capability-appropriate checks and verify changed state. Reuse evidence only when it is durable, inspectable evidence of actual execution/observation with an identifiable candidate, checked surface, relevant inputs/environment, and outcome. Independently establish that it satisfies the gate being owned; prose claims or recollection are not execution evidence.
-
-A later mutation invalidates the checks whose coverage or inputs it affects. Rerun those checks and mandatory related invariants; preserve unaffected valid evidence. Reuse expensive runtime verification across an unchanged candidate and relevant environment. A new turn/session alone does not invalidate evidence. Execute or observe relevant checks when required evidence cannot be inspected or established. Skipped/unavailable checks are not PASS.
-
-## Report
-
-Report current state, source candidate, affected surface, decisions, changes, and exact usage/maintenance commands. Distinguish reusable evidence, invalidated evidence, freshly established evidence, and assumptions/inferences that are not evidence. Include remaining risks and uncertainties.
-
-## Detailed references
-
-Add focused files under `references/` only when more detail is needed and give each reference a concrete scope/risk/ambiguity load trigger. Load triggered safety references; a bounded amendment does not require every reference or full template replay. Add scripts/assets only when they materially improve deterministic execution.
+The helper requires a trusted host-injected resolver context (authenticated principal, explicit time, current grants, exact effective source map and allowed properties/fields). Request authorization booleans never suffice. See the trusted-host section of the contract before integrating any inputs.

@@ -1,29 +1,7 @@
-# Validation obligations
+# Validation
 
-The scaffold supplies generic package/release validation and regression fixtures. Add domain-specific tests and regressions.
+The W2 provider thin profile uses the official Ecosystem v0.5.4 plugin:certify-thin against a committed clean candidate. It validates Agent Plugins/Agent Skills, paths/payload, portable archive and all discovered provider tests. Authoring tests are excluded from the portable ZIP through /tests export-ignore.
 
-Capability regressions should prove bounded amendments of healthy authoritative artifacts, deep-path escalation, preservation of unrelated valid artifacts/evidence, targeted invalidation/revalidation, and independent gate ownership. Assert semantic obligations or observable behavior rather than rigid prose sentences unless exact wording is the contract. Adapt these cases to the capability; do not embed provider-specific policy in generic package validation.
+Run mise run bootstrap and mise run doctor once for the pinned toolchain, mise run ci:fast before candidate commit and mise run release:check against the committed candidate. Thin certification is the central profile; container lanes are not required since maintenance portability is unchanged. No claim of host/storage qualification, Operator E2E, G6/G7 or Production Ready results from these gates.
 
-Report reusable durable execution/observation evidence, invalidated evidence, freshly established evidence, and assumptions/inferences that are not evidence. Independently inspect reused evidence and rerun affected checks plus mandatory invariants when changes invalidate it. This refinement does not reduce the formal gates below.
-
-Before first release:
-
-~~~text
-# after README.plugin.md -> README.md and placeholder replacement
-mise install
-mise run bootstrap
-# optional source diagnostic; not a release gate
-pnpm run checksums:generate
-mise run doctor
-mise run validate
-mise run test
-mise run ci:fast
-mise run ci:extended
-mise run jobs:local
-# commit candidate
-mise run release:check
-~~~
-
-Also run `skills-ref validate` for each skill when available.
-
-No placeholder token or scaffold-only `README.plugin.md` may remain in the release candidate.
+Domain regressions cover deterministic evaluation, source versions, immutability, explicit criteria/consumer guards, stale/disputed/unaccepted/missing facts, UNKNOWN preservation, explain integrity/scope, refresh lineage/scope and rejection of forbidden dispatch/mutation actions.
