@@ -1,0 +1,1 @@
+{"schema":"dev.woia.provider-manifest/v1","name":"woia-re-property-matching","capability":"property-matching","version":"0.5.0","origin":"native","authoring_profile":"thin","actions":["property-match.evaluate","property-match.explain","property-match.refresh"],"support":{"deterministic_contract":"implemented","storage_adapter":"NOT_QUALIFIED","external_effects":"unsupported"}}
