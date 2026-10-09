@@ -1,6 +1,6 @@
 # Evaluation contract
 
-Runtime semantic reference: published woia-re-domain-contracts v0.5.0, commit fb1c8a3f7fb116f2a00daf05ae335fdfbc7c3f3f, tree f3ff5a68a0d5df2e615a650eddc313c9585b7f08. This is a versioned semantic reference, not a hard package/repository dependency. Temporary build coordination is not required for consumer operation.
+Runtime semantic reference: published woia-re-domain-contracts v0.5.6, commit fb1c8a3f7fb116f2a00daf05ae335fdfbc7c3f3f, tree f3ff5a68a0d5df2e615a650eddc313c9585b7f08. This is a versioned semantic reference, not a hard package/repository dependency. Temporary build coordination is not required for consumer operation.
 
 Actions: property-match.evaluate, property-match.explain, property-match.refresh. Consumers: Sales, Leasing, Customer Service. No availability, Mandate authority, competent acceptance or external-person contact is granted by a match.
 
