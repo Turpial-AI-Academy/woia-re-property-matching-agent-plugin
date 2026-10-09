@@ -1,6 +1,6 @@
 # woia-re-property-matching
 
-Evaluation-only Real Estate provider v0.5.6 for Sales, Leasing and Customer Service.
+Evaluation-only Real Estate provider v0.5.7 for Sales, Leasing and Customer Service.
 
 Actions: property-match.evaluate, property-match.explain, property-match.refresh. Explicit accepted criteria are compared against versioned, scoped facts. Stale, disputed, unaccepted or missing facts remain UNKNOWN. No criteria, score weighting, business rules or organization authority are invented.
 

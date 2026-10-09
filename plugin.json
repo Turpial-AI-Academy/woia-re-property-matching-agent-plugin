@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "woia-re-property-matching",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "Evaluate explicit property criteria with immutable source evidence; matches never grant availability, authority or acceptance.",
   "author": {
     "name": "Turpial AI Academy",
